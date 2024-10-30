@@ -1,0 +1,107 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Intro Text */
+.intro {
+    margin: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Navigation (optional) */
+.navigation {
+    margin: 10px 0;
+}
+
+.navigation a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Main Content with Centered Links */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Link Boxes */
+.link-box {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Highlighted Book a Session */
+.link-box.highlighted {
+    background-color: #ff9800; /* Add an accent color */
+    color: #fff;
+    font-size: 2.2em;
+    padding: 25px 45px;
+    transition: background-color 0.3s;
+}
+
+.link-box.highlighted:hover {
+    background-color: #ff7800;
+}
+
+.cta-text {
+    color: #d20000;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Contact Link */
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+/* About Section Higher Up */
+#about {
+    margin: 40px 0;
+    color: #333;
+    font-size: 1em;
+}
+
+footer p {
+    color: #333;
+    font-size: 0.9em;
+}
