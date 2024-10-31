@@ -12,7 +12,7 @@ body {
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background-color: rgba(244, 244, 244, 0.35); /* Set background opacity to 35% */
 }
 
 /* Header */
@@ -52,7 +52,7 @@ h1 {
     color: #fff;
     padding: 20px;
     margin: 20px 0;
-    width: 100%;
+    width: 300px; /* Set width for vertical rectangle */
     text-align: center;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -66,6 +66,13 @@ h1 {
     font-size: 1.8em;
     color: #ff9800;
     margin-bottom: 10px;
+}
+
+.package-box ul {
+    list-style-type: disc; /* Use bullet points */
+    margin: 15px 0;
+    padding-left: 20px; /* Indent bullets */
+    text-align: left; /* Align text to the left for better readability */
 }
 
 .package-box p {
