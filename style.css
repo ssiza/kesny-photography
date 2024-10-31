@@ -94,14 +94,24 @@ header {
     text-decoration: underline;
 }
 
-/* About Section Higher Up */
-#about {
-    margin: 40px 0;
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
     color: #333;
-    font-size: 1em;
 }
 
-footer p {
-    color: #333;
-    font-size: 0.9em;
+/* Social Media Icons */
+footer img {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    transition: transform 0.3s;
 }
+
+footer img:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
