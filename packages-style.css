@@ -1,0 +1,127 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+}
+
+/* Intro Text */
+.intro {
+    margin: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Packages Container */
+.packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Individual Package Box */
+.package-box {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.package-box:hover {
+    transform: scale(1.03);
+}
+
+.package-box h2 {
+    font-size: 1.8em;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.package-box p {
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+/* Booking Links */
+.book-now {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #ff9800;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: #ff7800;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+/* About Link in Footer */
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* Social Media Icons in Footer */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
