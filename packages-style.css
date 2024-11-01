@@ -8,95 +8,110 @@
 /* Basic Styling */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    background-color: #333;
+    color: #fff;
     text-align: center;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+/* Header Styling */
+header {
+    width: 100%;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
 
-.logo {
+header img {
     width: 35px;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
-.site-title {
+header h1 {
+    display: inline-block;
     font-size: 1.8em;
-    text-decoration: none;
-    color: #333;
+    margin: 0;
+    vertical-align: middle;
+    color: #fff;
 }
 
 /* Packages Section */
-.packages h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px;
 }
 
-.packages p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-
-/* Package Box Styling */
 .package-box {
-    display: inline-block;
-    border: 2px solid #333;
-    width: 30%;
-    min-width: 250px;
-    margin: 10px;
+    flex: 1 1 30%;
+    max-width: 300px;
+    background-color: #000;
     padding: 20px;
+    color: #fff;
+    border: 1px solid #444;
     text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.package-box:hover {
+    transform: translateY(-5px);
 }
 
 .package-box h2 {
     font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 .package-box ul {
     list-style: none;
-    margin-bottom: 20px;
+    padding: 0;
+    font-size: 1em;
+    color: #ccc;
+    text-align: left;
 }
 
 .package-box ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.book-now, .contact-us {
+/* Buttons */
+.package-box a.book-now,
+.package-box a.contact-us {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+    background-color: #ff9800;
     color: #fff;
+    padding: 10px 20px;
+    margin-top: 15px;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 0; /* Sharp corners */
 }
 
-.contact-us {
-    background-color: #ff9800;
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .packages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-box {
+        max-width: 100%;
+    }
 }
 
 /* Footer Styling */
-.footer {
+footer {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: center; /* Center the footer content */
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    color: #ccc;
 }
 
-.social-icons img {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .package-box {
-        width: 80%; /* Stacks the boxes vertically on smaller screens */
-    }
+footer .social-icons {
+    display: flex;
+    gap: 15px;
 }
