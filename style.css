@@ -61,10 +61,10 @@ h1 {
 .link-box {
     background-color: #000;
     color: #fff;
-    padding: 20px 40px;
+    padding: 20px 40px; /* Padding for normal link boxes */
     margin: 20px 0;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2em; /* Font size for normal link boxes */
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -72,16 +72,17 @@ h1 {
 
 /* Highlighted Book a Session */
 .link-box.highlighted {
-    background-color: #ff9800; /* Add an accent color */
+    background-color: #ff9800; /* Highlighted background color */
     color: #fff;
-    font-size: 2.2em;
-    padding: 25px 45px;
+    font-size: 2em; /* Match font size with normal boxes */
+    padding: 20px 40px; /* Match padding with normal boxes */
     transition: background-color 0.3s;
 }
 
 .link-box.highlighted:hover {
-    background-color: #ff7800;
+    background-color: #ff7800; /* Hover effect */
 }
+
 
 .cta-text {
     color: #d20000;
