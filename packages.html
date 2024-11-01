@@ -5,77 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Packages | Kesny Photography</title>
     <link rel="stylesheet" href="packages-style.css">
-    <style>
-        /* Styles for Packages Section */
-        .packages-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .package-box {
-            flex: 1 1 30%;
-            background-color: #f7f7f7;
-            padding: 20px;
-            border-radius: 0; /* Sharp corners */
-            border: 1px solid #ddd;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .package-box h2 {
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .package-box ul {
-            list-style: none;
-            padding: 0;
-            font-size: 1em;
-            color: #555;
-            text-align: left;
-        }
-
-        .book-now, .contact-us {
-            display: inline-block;
-            background-color: #ff9800;
-            color: #fff;
-            padding: 10px 20px;
-            margin-top: 15px;
-            text-decoration: none;
-            border-radius: 0; /* Sharp corners */
-        }
-
-        /* Media Query for Responsiveness */
-        @media (max-width: 768px) {
-            .packages-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .package-box {
-                max-width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
 
     <!-- Header Section -->
-    <header style="display: flex; align-items: center; justify-content: center;">
-        <img src="media/favicon.png" alt="Logo" style="width: 35px; margin-right: 10px;">
-        <a href="index.html" style="text-decoration: none;">
-            <h1>KESNY PHOTOGRAPHY</h1>
-        </a>
+    <header class="header">
+        <img src="media/favicon.png" alt="Logo" class="logo">
+        <a href="index.html" class="site-title">KESNY PHOTOGRAPHY</a>
     </header>
 
     <!-- Packages Section -->
-    <section id="booking" style="text-align: center; margin: 40px;">
-        <h2 style="font-size: 2.2em; color: #333; margin-bottom: 20px;">Choose Your Package</h2>
-        <p style="font-size: 1.1em; color: #333; margin-bottom: 30px;">Select the perfect session bundle for your needs.</p>
+    <section id="booking" class="packages">
+        <h2>Choose Your Package</h2>
+        <p>Select the perfect session bundle for your needs.</p>
 
         <!-- Package Boxes Container -->
         <div class="packages-container">
@@ -111,24 +53,23 @@
             <!-- Custom Sessions -->
             <div class="package-box">
                 <h2>Custom Sessions</h2>
-                <p>Looking for something different? Contact us to discuss a session tailored to your needs. Perfect for events, extended family shoots, or unique projects.</p>
+                <p>Looking for something different? Contact us to discuss a session tailored to your needs.</p>
                 <a href="mailto:kesny@example.com" class="contact-us">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px 10px; font-size: 0.9em; color: #333;">
-        <!-- Social Media Icons -->
-        <div style="display: flex; gap: 15px;">
+    <footer class="footer">
+        <div class="social-icons">
             <a href="https://www.instagram.com/kesnyphotography/" target="_blank">
-                <img src="media/instagram-icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+                <img src="media/instagram-icon.png" alt="Instagram">
             </a>
             <a href="https://www.pinterest.com/kesnyphotography/" target="_blank">
-                <img src="media/pinterest-icon.png" alt="Pinterest" style="width: 24px; height: 24px;">
+                <img src="media/pinterest-icon.png" alt="Pinterest">
             </a>
             <a href="https://www.threads.net/@kesnyphotography" target="_blank">
-                <img src="media/threads-icon.png" alt="Threads" style="width: 24px; height: 24px;">
+                <img src="media/threads-icon.png" alt="Threads">
             </a>
         </div>
     </footer>
