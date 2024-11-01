@@ -8,9 +8,12 @@
 /* Basic Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #333;
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
 /* Header Styling */
@@ -101,17 +104,23 @@ header h1 {
     }
 }
 
-/* Footer Styling */
+/* Footer Section */
 footer {
     display: flex;
-    justify-content: center; /* Center the footer content */
+    justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
     font-size: 0.9em;
-    color: #ccc;
+    color: #333;
 }
 
-footer .social-icons {
-    display: flex;
-    gap: 15px;
+/* Social Media Icons */
+footer img {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.1); /* Slight hover effect */
 }
