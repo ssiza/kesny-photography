@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,84 +6,135 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header Styles --- */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 1em 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 1em;
+    font-size: 1.8em;
+}
+
+/* Navigation Bar (Desktop) */
+nav {
+    margin-right: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* --- Main Content Layout --- */
+main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-}
-
-/* Header */
-header {
     width: 100%;
-    padding: 1em 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    padding: 20px;
 }
 
-/* Intro Text */
+/* --- Hero Section Styles --- */
 .intro {
-    margin: 20px;
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 1.1em;
     color: #333;
 }
 
-h1 {
-    color: #fff; /* Ensure the heading is white */
-    margin: 0; /* Remove default margin */
-}
-
-/* Navigation (optional) */
-.navigation {
-    margin: 10px 0;
-}
-
-.navigation a {
-    color: #333;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-/* Main Content with Centered Links */
-.main-content {
+/* --- Link Box Styles --- */
+#main-content {
+    width: 100%; /* Ensure main content spans the full width */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Link Boxes */
-.link-box {
+.session-link {
+    display: block;
     background-color: #000;
     color: #fff;
-    padding: 20px 40px; /* Padding for normal link boxes */
-    margin: 20px 0;
-    text-decoration: none;
-    font-size: 2em; /* Font size for normal link boxes */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1.8em;
     font-weight: bold;
     text-align: center;
-    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Highlighted Book a Session */
-.link-box.highlighted {
-    background-color: #ff9800; /* Highlighted background color */
+.session-link:hover {
+    background-color: #333; /* Darken on hover */
+}
+
+.session-link.highlighted {
+    background-color: #ff9800;
     color: #fff;
-    font-size: 2em; /* Match font size with normal boxes */
-    padding: 20px 40px; /* Match padding with normal boxes */
-    transition: background-color 0.3s;
 }
-
-.link-box.highlighted:hover {
-    background-color: #ff7800; /* Hover effect */
+.session-link.highlighted:hover {
+    background-color: #ff7800;
 }
-
-
+/* --- Call To Action Text --- */
 .cta-text {
     color: #d20000;
     font-size: 1em;
@@ -91,16 +142,8 @@ h1 {
     margin-top: 10px;
 }
 
-/* Contact Link */
-.contact-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #333;
-    font-size: 1em;
-    text-decoration: underline;
-}
 
-/* Footer Section */
+/* --- Footer Styles --- */
 footer {
     display: flex;
     justify-content: space-between;
@@ -108,16 +151,35 @@ footer {
     padding: 20px 10px;
     font-size: 0.9em;
     color: #333;
+    border-top: 1px solid #ddd;
 }
 
-/* Social Media Icons */
 footer img {
-    width: 24px; /* Adjust icon size */
-    height: 24px; /* Adjust icon size */
+    width: 24px;
+    height: 24px;
     transition: transform 0.3s;
 }
 
 footer img:hover {
-    transform: scale(1.1); /* Slight hover effect */
+    transform: scale(1.1);
 }
 
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    header {
+        justify-content: space-between;
+    }
+    header h1{
+        margin: 0 10px;
+    }
+    main {
+        padding: 10px;
+    }
+}
