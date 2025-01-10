@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,101 +6,92 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat, will add google font later */
     background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-    width: 100%;
-    padding: 1em 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-/* Intro Text */
-.intro {
-    margin: 20px;
-    font-size: 1.1em;
     color: #333;
-}
-
-h1 {
-    color: #fff; /* Ensure the heading is white */
-    margin: 0; /* Remove default margin */
-}
-
-/* Navigation (optional) */
-.navigation {
-    margin: 10px 0;
-}
-
-.navigation a {
-    color: #333;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-/* Main Content with Centered Links */
-.main-content {
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure the body always covers at least the full viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
 }
 
-/* Link Boxes */
-.link-box {
+a {
+    text-decoration: none;
+    color: inherit; /* Makes links inherit the text color */
+}
+
+/* --- Header Styles --- */
+header {
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top of the viewport */
     background-color: #000;
     color: #fff;
-    padding: 20px 40px; /* Padding for normal link boxes */
-    margin: 20px 0;
-    text-decoration: none;
-    font-size: 2em; /* Font size for normal link boxes */
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
+    padding: 1em 0;
+    width: 100%; /* Ensure header spans the entire width */
+    z-index: 100; /* Ensure header is always on top of other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Highlighted Book a Session */
-.link-box.highlighted {
-    background-color: #ff9800; /* Highlighted background color */
+header h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for the header */
+    margin: 0 1em;
+    font-size: 1.8em; /* Increase font size */
+}
+
+/* Navigation Bar (Desktop) */
+nav {
+    margin-right: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
     color: #fff;
-    font-size: 2em; /* Match font size with normal boxes */
-    padding: 20px 40px; /* Match padding with normal boxes */
-    transition: background-color 0.3s;
-}
-
-.link-box.highlighted:hover {
-    background-color: #ff7800; /* Hover effect */
-}
-
-
-.cta-text {
-    color: #d20000;
-    font-size: 1em;
     font-weight: bold;
-    margin-top: 10px;
+    padding: 5px 10px;
+    transition: color 0.3s;
 }
 
-/* Contact Link */
-.contact-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #333;
-    font-size: 1em;
-    text-decoration: underline;
+nav a:hover {
+    color: #ff9800; /* Highlight color on hover */
 }
 
-/* Footer Section */
+/* Hamburger Menu (Mobile) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* --- Main Content Layout --- */
+main {
+  flex: 1; /* Allow main to grow and take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Ensure main spans the full width */
+    padding: 20px;
+}
+
+
+/* --- Footer Styles --- */
 footer {
     display: flex;
     justify-content: space-between;
@@ -108,9 +99,9 @@ footer {
     padding: 20px 10px;
     font-size: 0.9em;
     color: #333;
+    border-top: 1px solid #ddd; /* Add a line above the footer for separation */
 }
 
-/* Social Media Icons */
 footer img {
     width: 24px; /* Adjust icon size */
     height: 24px; /* Adjust icon size */
@@ -121,3 +112,24 @@ footer img:hover {
     transform: scale(1.1); /* Slight hover effect */
 }
 
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    /* Hide desktop nav on smaller screens */
+    nav {
+        display: none;
+    }
+     /* Show hamburger menu on smaller screens */
+    .hamburger-menu {
+        display: block;
+    }
+    /* Adjust layout of the header */
+    header {
+        justify-content: space-between; /* Space out brand and hamburger */
+    }
+    header h1{
+        margin: 0 10px;
+    }
+    main {
+        padding: 10px;
+    }
+}
