@@ -89,21 +89,21 @@ main {
     width: 100%;
 }
 
-
 /* --- Hero Section Styles --- */
 .hero {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-image: url('media/DSC00805.jpg'); /* Hero Image */
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/DSC00805.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
+        background-color: rgba(0,0,0,0.8); /* Darker Background Color */
 }
 
 .hero::before {
@@ -113,7 +113,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.3); /* semi transparent black overlay*/
 }
 
 .hero-content {
@@ -130,10 +130,9 @@ main {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
     margin-bottom: 20px;
-    opacity: 0; /* Initial opacity for animation */
+      opacity: 0; /* Initial opacity for animation */
     animation: fadeIn 1s ease 0.5s forwards; /* Fade-in animation */
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -144,33 +143,81 @@ main {
     transform: translateY(0);
   }
 }
-
-/* Image Rectangle Styles */
-.image-reveal-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-    pointer-events: none;
+/* --- Polaroid Gallery Styles --- */
+.polaroid-gallery {
+     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 80%; /* Reduced width */
+    max-width: 1000px; /* Maximum width */
+    height: 500px;
+    overflow: hidden;
 }
 
-.image-reveal {
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0; /* Start invisible */
-    animation: reveal-fade 5s linear infinite;
+.polaroid-gallery img {
+    position: absolute; /* Position polaroids using absolute positioning */
+    max-width: 250px;
+    max-height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 6px solid white;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    opacity: 0; /* Initial opacity for fade in */
+     transform-origin: center center;
+     pointer-events: auto; /* Make images clickable */
 }
 
-@keyframes reveal-fade {
-    0%, 20% { opacity: 0; }
-    20%, 80% { opacity: 1; }
-    80%, 100% { opacity: 0; }
+/* Individual Polaroid positions and animations */
+.polaroid-gallery img:nth-child(1) {
+    top: 20%;
+    left: 10%;
+     transform: rotate(10deg);
+    animation: polaroid-fade-in 1s ease 0.2s forwards;
 }
 
+.polaroid-gallery img:nth-child(2) {
+   top: 10%;
+    left: 40%;
+    transform: rotate(-5deg);
+     animation: polaroid-fade-in 1s ease 0.4s forwards;
+}
+
+.polaroid-gallery img:nth-child(3) {
+      top: 20%;
+    left: 70%;
+    transform: rotate(5deg);
+    animation: polaroid-fade-in 1s ease 0.6s forwards;
+}
+
+.polaroid-gallery img:nth-child(4) {
+    top: 50%;
+    left: 20%;
+    transform: rotate(-8deg);
+    animation: polaroid-fade-in 1s ease 0.8s forwards;
+}
+
+.polaroid-gallery img:nth-child(5) {
+       top: 50%;
+    left: 60%;
+    transform: rotate(15deg);
+    animation: polaroid-fade-in 1s ease 1s forwards;
+}
+@keyframes polaroid-fade-in {
+    from {
+        opacity: 0;
+         transform: rotate(0deg) scale(0.8); /*Initial scaled state */
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);  /*Final normal state*/
+    }
+}
+.polaroid-gallery img:hover {
+    transform: rotate(0) scale(1.1); /* Slight scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+     z-index: 2;
+}
 /* --- Call to Action Button --- */
 .hero a.book-now {
         background-color: #ff9800;
@@ -182,15 +229,13 @@ main {
         border-radius: 5px;
         display: inline-block;
         transition: background-color 0.3s ease;
-         position: relative;
-    z-index: 2; /* Ensure it's above the image reveals */
-
+        position: relative;
+        z-index: 2;
 }
 
 .hero a.book-now:hover {
     background-color: #ff7800;
 }
-
 
 /* --- Footer Styles --- */
 footer {
@@ -212,7 +257,6 @@ footer img {
 footer img:hover {
     transform: scale(1.1);
 }
-
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
