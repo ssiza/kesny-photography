@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,9 +33,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="https://sites.google.com/view/kesnyphotography-portfolio/home">Portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="packages.html">Price Guide</a></li>
-                <li><a href="book-session.html">Booking</a></li>
+                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
         <div class="hamburger-menu">
@@ -46,20 +46,20 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-left">
-             <img src="media/DSC06904.jpg" alt="Hero Image" >
-        </div>
-        <div class="hero-right">
+        <section class="hero">
+             <video id="hero-video" autoplay loop muted playsinline>
+            <source src="https://kesny-photography.s3.us-east-2.amazonaws.com/media/mobile-hero.mp4" type="video/mp4" media="(orientation: portrait)">
+            <source src="https://kesny-photography.s3.us-east-2.amazonaws.com/media/desktop-hero.mp4" type="video/mp4" media="(orientation: landscape)">
+                Your browser does not support the video tag.
+             </video>
             <div class="hero-content">
                 <h1>KESNY PHOTOGRAPHY</h1>
-                <a href="book-session.html" class="book-now">Book Now</a>
+                <a href="packages.html" class="book-now">Book Now</a>
             </div>
-        </div>
-      </section>
+        </section>
     </main>
 
-   <footer>
+    <footer>
         <!-- Social Media Icons -->
         <div class="social-icons">
             <a href="https://www.instagram.com/kesnyphotography/" target="_blank">
@@ -72,8 +72,7 @@
                 <img src="media/threads-icon.png" alt="Threads">
             </a>
         </div>
-   </footer>
-
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
