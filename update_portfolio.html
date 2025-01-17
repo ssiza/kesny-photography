@@ -1,0 +1,101 @@
+import os
+import glob
+
+def generate_portfolio_html(media_folder, output_file):
+    """Generates HTML for portfolio images with image-container divs and data-categories,
+       using the specified HTML structure.
+
+    Args:
+        media_folder: The path to the 'media' folder (containing 'portfolio' folder).
+        output_file: Path to the HTML file to be updated (e.g., 'portfolio.html').
+    """
+    portfolio_folder = os.path.join(media_folder, "portfolio")
+    group_folder = os.path.join(portfolio_folder, "group")
+    individual_folder = os.path.join(portfolio_folder, "individual")
+
+    group_images = get_images_from_directory(group_folder)
+    individual_images = get_images_from_directory(individual_folder)
+
+    gallery_html = generate_image_container_html(individual_images, "individual")
+    gallery_html += generate_image_container_html(group_images, "group-family")
+
+    # Construct the HTML structure to be inserted
+    html_content = f"""
+         <div class="gallery-buttons">
+              <div class="dropdown">
+                  <button class="dropbtn">Filter Portfolio</button>
+                 <div class="dropdown-content">
+                       <a href="#" data-category="individual">Individual Portraits</a>
+                       <a href="#" data-category="group-family">Group & Family Portraits</a>
+                      <a href="#" data-category="all">All</a>
+                  </div>
+             </div>
+          </div>
+          <section class="gallery">
+            {gallery_html}
+          </section>
+    """
+
+
+    # Read original html file
+    try:
+        with open(output_file, "r") as f:
+            html_original = f.read()
+    except FileNotFoundError:
+        print(f"Error: {output_file} not found. Exiting.")
+        return
+
+    # Find the appropriate insertion point (e.g., between <!-- Portfolio --> and <!-- End Portfolio -->)
+    start_comment = "<!-- Portfolio -->"
+    end_comment = "<!-- End Portfolio -->"
+
+    try:
+        start_index = html_original.index(start_comment)
+        end_index = html_original.index(end_comment) + len(end_comment)
+
+        # Replace portfolio content
+        updated_html = html_original[:start_index] + start_comment + html_content + end_comment + html_original[end_index:]
+    except ValueError:
+      print("Error: Insertion comments not found in html. Check your html. Exiting.")
+      return
+
+    # Write updated html to file
+    try:
+        with open(output_file, "w") as f:
+            f.write(updated_html)
+    except Exception as e:
+       print(f"Error: Unable to write to {output_file}. Error: {e}")
+       return
+
+    print("portfolio.html updated successfully!")
+
+def get_images_from_directory(folder_path):
+    """Returns a list of all images from the specified folder."""
+    image_extensions = ["*.jpg", "*.jpeg", "*.JPG", "*.JPEG", "*.PNG", "*.png", "*.gif", "*.bmp", "*.svg"]  # Add more as needed
+    images = []
+    for ext in image_extensions:
+        images.extend(glob.glob(os.path.join(folder_path, ext)))
+    return images
+
+def generate_image_container_html(image_list, category):
+    """Generates HTML for image containers with data-category attributes,
+       using the specified HTML structure."""
+    html = ""
+    for img_path in image_list:
+        img_filename = os.path.basename(img_path)
+        if category == "group-family":
+            img_relative_path = os.path.join("media/PORTFOLIO", "GROUP", img_filename)
+        else:
+             img_relative_path = os.path.join("media/PORTFOLIO", category.upper().replace('-','_').replace('_',''), img_filename)
+        html += f'''
+                 <div class="image-container" data-image="{img_relative_path}" data-category="{category.replace('_','-')}">
+                    <img src="{img_relative_path}" alt="Portfolio Image">
+                 </div>
+        '''
+    return html
+
+if __name__ == "__main__":
+    media_dir = "media"  # Path to your 'media' folder (relative to script)
+    portfolio_html_file = "portfolio.html"  # Path to your portfolio.html file
+
+    generate_portfolio_html(media_dir, portfolio_html_file)
