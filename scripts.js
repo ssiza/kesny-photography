@@ -1,34 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const nav = document.querySelector('nav');
-      const heroLeft = document.querySelector('.hero-left');
-    const heroRight = document.querySelector('.hero-right');
-       const heroImg = document.querySelector('.hero-left img');
-    const images = ['media/DSC06904.jpg', 'media/DSC07134.jpg', 'media/_DSC2903.jpg', 'media/_DSC4523.jpg', 'media/_DSC5097.jpg'];
-    let currentImageIndex = 0;
-
+    const video = document.getElementById('hero-video');
+    const gallery = document.querySelector('.gallery');
+    const overlay = document.querySelector('.overlay');
+    const expandedImageContainer = document.querySelector('.expanded-image-container');
+    const expandedImage = document.querySelector('.expanded-image-container img');
+      const categoryFilter = document.querySelector('.dropdown-content');
+      const dropBtn = document.querySelector('.dropbtn')
+     document.addEventListener('click', (event) => {
+            if(nav.style.display === 'flex' && !nav.contains(event.target) && !hamburgerMenu.contains(event.target)){
+                nav.style.display = 'none';
+                  hamburgerMenu.classList.remove('active')
+          }
+         });
 
     if (hamburgerMenu && nav) {
         hamburgerMenu.addEventListener('click', function() {
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                  hamburgerMenu.classList.toggle('active')
         });
     }
-     heroRight.classList.add('fade-in');
-
-      function cycleImages() {
-            heroImg.classList.add('fade-out');
-            setTimeout(() => {
-                 heroImg.classList.remove('fade-out');
-                 currentImageIndex = (currentImageIndex + 1) % images.length;
-                heroImg.src = images[currentImageIndex];
-                heroImg.classList.add('fade-in');
-
-                setTimeout(() => {
-                 heroImg.classList.remove('fade-in');
-                 }, 1000)
-              }, 1000); // Wait for fade out then change image
-          
+       if(video){
+            video.classList.add('fade-in');
         }
-         cycleImages();
-      setInterval(cycleImages, 4000);
+        if(gallery && overlay && expandedImageContainer && expandedImage){
+             gallery.addEventListener('click', (event)=>{
+                const clickedElement = event.target.closest('.image-container')
+                if(clickedElement){
+                     const imgSrc = clickedElement.dataset.image;
+                    expandedImage.src = imgSrc;
+                    overlay.classList.add('active');
+                    expandedImageContainer.classList.add('active');
+               }
+        });
+          function closeExpandedImage(){
+                overlay.classList.remove('active')
+              expandedImageContainer.classList.remove('active')
+            }
+          overlay.addEventListener('click', closeExpandedImage);
+            expandedImageContainer.addEventListener('click', closeExpandedImage);
+        }
+       if(categoryFilter && gallery){
+        function filterImages(category) {
+              const imageContainers = document.querySelectorAll('.gallery .image-container');
+             imageContainers.forEach(container => {
+                  if (category === 'all' || container.dataset.category === category) {
+                      container.classList.remove('hide');
+                  } else {
+                        container.classList.add('hide');
+                   }
+            });
+          }
+        categoryFilter.addEventListener('click', (event) => {
+             if (event.target.tagName === 'A'){
+                const selectedCategory = event.target.dataset.category
+                 filterImages(selectedCategory)
+             }
+
+        });
+           filterImages('all');
+
+         document.addEventListener('click', (event) => {
+            if(categoryFilter.style.display === 'block' && !categoryFilter.contains(event.target) && !dropBtn.contains(event.target)){
+                categoryFilter.style.display = 'none';
+          }
+         });
+        }
 });
