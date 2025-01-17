@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.png" type="image/x-icon">
     <title>Photography Packages | Kesny Photography</title>
-    <link rel="stylesheet" href="packages-style.css">
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYDJ6PZMTN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -19,63 +24,72 @@
     
 <body>
 
-   
-  <!-- Title Section -->
-    <header style="display: flex; align-items: center; justify-content: center;">
-        <img src="media/favicon.png" alt="Logo" style="width: 35px; margin-right: 10px;">
-        <a href="index.html" style="text-decoration: none;">
+    <header>
+        <a href="index.html">
             <h1>KESNY PHOTOGRAPHY</h1>
         </a>
+        <nav>
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="packages.html">Price Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
-
-    <!-- Packages Section -->
-    <section id="booking" class="packages">
-        <h2>Choose Your Package</h2>
-        <p>Select the perfect session bundle for your needs.</p>
-
-        <!-- Package Boxes Container -->
-        <div class="packages-container">
-            <!-- 1-Hour Session -->
+    <main>
+        <h1>Price Guide</h1>
+          <section class="packages">
             <div class="package-box">
                 <h2>Solo Portrait</h2>
                 <ul>
-                    <li>Starting at $85</li>
-                    <li>20+ edited photos</li>
-                    <li>As many outfit changes as time permits</li>
-                    <li>Flexible location (studio or outdoor)</li>
-                    <br>
-                    <li>Pricing personalized based on location and hours of coverage</li>
+                    <li>Starting at $150</li>
+                    <li>20+ beautifully edited photos</li>
+                    <li>Includes:</li>
+                    <ul>
+                        <li>A variety of poses: full-body, close-up, and candid</li>
+                        <li>Unlimited outfit changes (within your session time)</li>
+                        <li>Choice of location: studio or outdoor</li>
+                    </ul>
+                    <li>💡 Personalized pricing available for extended hours and specific locations.</li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfd7RmQ6cL-OSnCwYs9URqzrtl0SYv2pp8AuoKdNIlMi-q8iQ/viewform?usp=sharing" class="book-now">Book Now</a></li>
                 </ul>
-                <a href="https://forms.gle/kGRcyYT97y65G4c77" class="book-now">Book Now</a>
+                
             </div>
-
-            <!-- 2-Hour Session -->
             <div class="package-box">
                 <h2>Family/Group</h2>
                 <ul>
-                    <li>Starting at $250</li>
-                    <li>30+ edited photos</li>
-                    <li>Up to 5 people</li>
-                    <li>$25 per extra person</li>
-                    <li>Flexible location (studio or outdoor)</li>
-                    <br>
-                    <li>Personalized pricing based on location, group size, and hours of coverage</li>
+                    <li>Starting at $300 (up to 3 people)</li>
+                    <li>$25 per additional person</li>
+                    <li>35+ professionally edited photos</li>
+                    <li>Includes:</li>
+                    <ul>
+                        <li>Group photos: posed and candid</li>
+                        <li>Individual portraits for each person</li>
+                        <li>Pairs or small group combinations (e.g., siblings, parents)</li>
+                    </ul>
+                    <li>Choice of location: studio or outdoor</li>
+                    <li>💡 Pricing based on your group size, location, and coverage time.</li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScq2U2K_zKk6_z-L6t1y91PzZoCQ9UwnKGzujBynUs_-kjAxg/viewform?usp=sharing" class="book-now">Book Now</a></li>
                 </ul>
-                <a href="https://forms.gle/eradcXoEX2VSTY6o6" class="book-now">Book Now</a>
+                
             </div>
-
-            <!-- Custom Sessions -->
             <div class="package-box">
-                <h2>Custom Sessions</h2>
-                <p>Want something different? Reach out to plan a session customized to your vision.</p>
-                <a href="https://forms.gle/gKM4UvmSyD4xkYQb6" class="contact-us">Contact Us</a>
+                 <h2>Custom Sessions</h2>
+                <p>Looking for something unique? Let’s bring your vision to life with a fully personalized session.</p>
+                 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeN0zjLE-MaX2zcget2XrEApUl8Tlau1EZ3UiTErbA-40urdw/viewform?usp=sharing" class="book-now">Reach out to start planning</a></p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="social-icons">
+     <footer>
+        <!-- Social Media Icons -->
+         <div class="social-icons">
             <a href="https://www.instagram.com/kesnyphotography/" target="_blank">
                 <img src="media/instagram-icon.png" alt="Instagram">
             </a>
@@ -86,7 +100,8 @@
                 <img src="media/threads-icon.png" alt="Threads">
             </a>
         </div>
-    </footer>
+   </footer>
 
+   <script src="scripts.js"></script>
 </body>
 </html>
