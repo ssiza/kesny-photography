@@ -11,7 +11,7 @@
 
   <!-- Kesny Photography Portfolio -->
   <url>
-    <loc>https://https://sites.google.com/view/kesnyphotography-portfolio/home</loc>
+    <loc>https://https://kflix.me/portfolio.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -25,9 +25,9 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Booking Page -->
+  <!-- About Page -->
   <url>
-    <loc>https://kflix.me/book-session.html</loc>
+    <loc>https://kflix.me/about.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
