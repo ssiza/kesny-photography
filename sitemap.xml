@@ -11,7 +11,7 @@
 
   <!-- Kesny Photography Portfolio -->
   <url>
-    <loc>https://https://kflix.me/portfolio.html</loc>
+    <loc>https://https://kflix.me/portfolio/index.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Photography Packages Page -->
   <url>
-    <loc>https://kflix.me/packages.html</loc>
+    <loc>https://kflix.me/packages/index.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -27,7 +27,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://kflix.me/about.html</loc>
+    <loc>https://kflix.me/about/index.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
