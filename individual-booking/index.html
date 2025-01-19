@@ -136,6 +136,18 @@
                     <label for="additionalRequests">Is there anything else you’d like to mention or request to ensure a smooth session?</label>
                     <textarea id="additionalRequests" name="additionalRequests" placeholder="Additional requests or questions"></textarea>
                 </div>
+
+                     <div class="form-group">
+                      <label for="acknowledgment">Acknowledgment *</label>
+                     <div class="acknowledgment-checkbox">
+                          <input type="checkbox" id="locationConfirm" name="locationConfirm" required>
+                           <label for="locationConfirm">I confirm that I am located in Massachusetts and eligible to book a session.</label>
+                      </div>
+                      <div class="acknowledgment-checkbox">
+                           <input type="checkbox" id="paymentConfirm" name="paymentConfirm" required>
+                            <label for="paymentConfirm">I understand that a down payment will be required to secure my booking if the session is confirmed.</label>
+                        </div>
+                    </div>  
                 
                 <button type="submit" class="book-now">Submit</button>
             </form>
