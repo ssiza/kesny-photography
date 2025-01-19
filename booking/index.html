@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/favicon.png" type="image/x-icon">
+    <title>Kesny Photography - Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RYDJ6PZMTN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RYDJ6PZMTN');
+</script>
+
+
+<body>
+
+    <header>
+        <a href="/">
+            <h1>KESNY PHOTOGRAPHY</h1>
+        </a>
+        <nav>
+            <ul>
+                 <li><a href="/">Home</a></li>
+                <li><a href="/portfolio/">Portfolio</a></li>
+                <li><a href="/packages/">Price Guide</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="booking">
+            <h2>Book Your Session</h2>
+            <p>Thank you for choosing Kesny Photography! After reviewing your details, we’ll contact you to confirm your booking. A down payment is required at least 4 days before your session to secure your spot. If payment isn’t received, the appointment will be released. We look forward to working with you!</p>
+            
+            <form class="booking-form" action="https://formspree.io/f/movvolvd" method="post">
+                
+                 <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+                </div>
+                
+               <div class="form-group">
+                    <label for="contactMethod">Preferred Contact Method *</label>
+                    <select id="contactMethod" name="contactMethod" required>
+                      <option value="" disabled selected>Select a method</option>
+                      <option value="email">Email</option>
+                      <option value="phone">Phone</option>
+                      <option value="text">Text</option>
+                    </select>
+                   <input type="text" id="contactDetails" name="contactDetails" placeholder="Enter your Email/Phone Number" style="display:none;" required>
+                </div>
+                
+                 <div class="form-group">
+                    <label for="sessionType">What type of session are you interested in? *</label>
+                    <input type="text" id="sessionType" name="sessionType" placeholder="e.g., Portrait, Event, Family" required>
+                </div>
+                
+                <div class="form-group">
+                     <label for="preferredDate">Preferred Date *</label>
+                     <input type="text" id="preferredDate" name="preferredDate" placeholder="Select Date" required>
+                </div>
+
+                 <div class="form-group">
+                      <label for="preferredTime">Time *</label>
+                    <select id="preferredTime" name="preferredTime" required>
+                        <option value="" disabled selected>Select Time</option>
+                    </select>
+                </div>
+                
+                 <div class="form-group">
+                    <label for="preferredLocation">Preferred Location *</label>
+                    <input type="text" id="preferredLocation" name="preferredLocation" placeholder="Location of your preference" required>
+                </div>
+                
+                 <div class="form-group">
+                   <label for="estimatedDuration">Estimated Duration (If known)</label>
+                    <input type="text" id="estimatedDuration" name="estimatedDuration" placeholder="e.g., 1 hour, 2 hours">
+                </div>
+
+                 <div class="form-group">
+                    <label for="numPeople">Number of People Involved</label>
+                    <input type="number" id="numPeople" name="numPeople" placeholder="e.g., 1, 2, 5">
+                 </div>
+                
+                <div class="form-group">
+                    <label for="ideas">Describe any specific ideas, themes, or requests you have for this session</label>
+                    <textarea id="ideas" name="ideas" placeholder="Describe your vision for the session"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budgetRange">Budget Range *</label>
+                    <input type="text" id="budgetRange" name="budgetRange" placeholder="Your Budget Range (e.g. $100-$200)" required>
+                </div>
+                  
+                  <div class="form-group">
+                    <label for="comments">Other Comments or Questions</label>
+                    <textarea id="comments" name="comments" placeholder="Any other notes you want to include?"></textarea>
+                </div>
+                
+                 <div class="form-group">
+                      <label for="acknowledgment">Acknowledgment *</label>
+                     <div class="acknowledgment-checkbox">
+                          <input type="checkbox" id="locationConfirm" name="locationConfirm" required>
+                           <label for="locationConfirm">I confirm that I am located in Massachusetts and eligible to book a session.</label>
+                      </div>
+                      <div class="acknowledgment-checkbox">
+                           <input type="checkbox" id="paymentConfirm" name="paymentConfirm" required>
+                            <label for="paymentConfirm">I understand that a down payment will be required to secure my booking if the session is confirmed.</label>
+                        </div>
+                    </div>
+                 
+                <button type="submit" class="book-now">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+         <div class="social-icons">
+            <a href="https://www.instagram.com/kesnyphotography/" target="_blank">
+                <img src="/media/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.pinterest.com/kesnyphotography/" target="_blank">
+                <img src="/media/pinterest-icon.png" alt="Pinterest">
+            </a>
+            <a href="https://www.threads.net/@kesnyphotography" target="_blank">
+                <img src="/media/threads-icon.png" alt="Threads">
+            </a>
+        </div>
+   </footer>
+     <div id="confirmation-overlay" class="overlay" style="display: none;">
+        <div id="confirmation-modal" class="confirmation-modal">
+            <h2>Confirm Your Details</h2>
+            <div id="confirmation-content"></div>
+            <button id="edit-button" class="book-now">Edit</button>
+            <button id="submit-button" class="book-now">Submit</button>
+        </div>
+    </div>
+   <script src="/scripts.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+  <script src="/form-handler.js"></script>
+</body>
+</html>
