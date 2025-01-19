@@ -7,14 +7,14 @@
   "description": "Professional photography services specializing in portraits, families, and groups.",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "City Name",
-    "addressRegion": "State",
-    "postalCode": "ZIP",
+    "addressLocality": "Boston",
+    "addressRegion": "Massachussetts",
+    "postalCode": "02108",
     "addressCountry": "US"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-123-456-7890",
+    "telephone": "+1-617-466-9603",
     "contactType": "Customer Service"
   }
 }
