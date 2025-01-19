@@ -3,7 +3,7 @@
   "@type": "LocalBusiness",
   "name": "Kesny Photography",
   "url": "https://kflix.me",
-  "logo": "https://kflix.me/favicon.ico",
+  "logo": "https://kflix.me/media/favicon.ico",
   "description": "Professional photography services specializing in portraits, families, and groups.",
   "address": {
     "@type": "PostalAddress",
