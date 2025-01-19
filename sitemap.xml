@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Home Page -->
   <url>
     <loc>https://kflix.me/</loc>
@@ -9,15 +9,39 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Kesny Photography Portfolio -->
+  <!-- About Page -->
   <url>
-    <loc>https://https://kflix.me/portfolio/index.html</loc>
+    <loc>https://kflix.me/about/index.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Photography Packages Page -->
+  <!-- Booking Page (General)-->
+  <url>
+    <loc>https://kflix.me/booking/index.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+    
+   <!-- Group Booking Page -->
+    <url>
+      <loc>https://kflix.me/group-booking/index.html</loc>
+      <lastmod>2024-11-01</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <!-- Individual Booking Page -->
+   <url>
+      <loc>https://kflix.me/individual-booking/index.html</loc>
+       <lastmod>2024-11-01</lastmod>
+      <changefreq>daily</changefreq>
+       <priority>0.7</priority>
+   </url>
+ 
+  <!-- Packages Page -->
   <url>
     <loc>https://kflix.me/packages/index.html</loc>
     <lastmod>2024-11-01</lastmod>
@@ -25,9 +49,9 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- About Page -->
+  <!-- Portfolio Page -->
   <url>
-    <loc>https://kflix.me/about/index.html</loc>
+    <loc>https://kflix.me/portfolio/index.html</loc>
     <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
