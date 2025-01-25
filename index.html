@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" id="canonical-url" href="https://www.kflix.me/">
   
 </head>
 
@@ -92,5 +93,16 @@
         </div>
     </footer>
     <script src="scripts.js"></script>
+    <script>
+        // Function to dynamically update the canonical URL
+        function updateCanonicalUrl() {
+            const canonicalElement = document.getElementById('canonical-url');
+            const currentURL = window.location.href;
+            canonicalElement.setAttribute('href', currentURL);
+        }
+
+        // Update canonical URL on page load
+        updateCanonicalUrl();
+    </script>
 </body>
 </html>
